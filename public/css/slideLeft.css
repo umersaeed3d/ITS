@@ -1,0 +1,8 @@
+.whole {
+    position: relative;
+    Width:100%;
+}
+.menu {
+    left: 50;
+    display: none;
+}
