@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/users', function () {
+    return User::all();
+});
 Route::get('/logout', function () {
     Session::flush();
     return redirect('/login');
@@ -28,9 +31,7 @@ Route::get('/logout', function () {
 Auth::routes();
 
 
-Route::get('/users', function () {
-    return User::all();
-});
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('categories',CategoryController::class);
