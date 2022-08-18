@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Session;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,20 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function username()
+    {
+        return 'user_name';
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        $permissionTable = Permission::where('role_id',auth()->user()->role_id)->get();
+        $access = [];
+        foreach ($permissionTable as $permission) {
+            array_push($access,$permission->name);
+        }
+        Session::put('permissions',$access);
     }
 }
