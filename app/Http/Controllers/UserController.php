@@ -64,6 +64,7 @@ class UserController extends Controller
             $data = $request->all();
             $data['password'] = Hash::make($request->password);
             $this->crud->store(User::class,$data);
+            dd(1);
             return redirect()->back()->with('success','User Added Successfully');
 
         }catch(\Illuminate\Database\QueryException $e){
