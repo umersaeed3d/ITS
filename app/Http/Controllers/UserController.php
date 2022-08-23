@@ -48,6 +48,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        dd(1);
         if(!in_array('user_add',Session::get('permissions'))){
             return redirect()->back()->with('error','You do not have permission for this action');
         }
@@ -64,7 +65,7 @@ class UserController extends Controller
             $data = $request->all();
             $data['password'] = Hash::make($request->password);
             $this->crud->store(User::class,$data);
-            dd(1);
+
             return redirect()->back()->with('success','User Added Successfully');
 
         }catch(\Illuminate\Database\QueryException $e){

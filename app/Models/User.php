@@ -47,13 +47,9 @@ class User extends Authenticatable
     public function labs(){
         return $this->hasMany(\App\Models\lab::class);
     }
+
     /**
-     * Get the user associated with the User
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    /**
-     * Get the user that owns the User
+     * Get the role that owns the User
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
