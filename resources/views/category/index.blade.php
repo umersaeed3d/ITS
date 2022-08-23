@@ -12,7 +12,7 @@
                         <h2>Add Category</h2>
                     </div>
                     <div class="modal-body">
-                        <form action="/categories/" method="POST" enctype="multipart/form-data">
+                        <form action="/categories" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="addInvBody">
 

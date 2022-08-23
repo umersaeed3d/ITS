@@ -12,7 +12,7 @@
                         <h2>Add User</h2>
                     </div>
                     <div class="modal-body">
-                        <form action="/users/" method="POST" enctype="multipart/form-data">
+                        <form action="/users" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="addInvBody">
 

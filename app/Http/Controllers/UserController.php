@@ -48,7 +48,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd(1);
+
         if(!in_array('user_add',Session::get('permissions'))){
             return redirect()->back()->with('error','You do not have permission for this action');
         }
