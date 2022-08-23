@@ -46,4 +46,13 @@
     </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+        $('#sidebar .side-menu.top li').removeClass('active');
+        $('#inventories').addClass("active");
+
+
+</script>
 @endsection

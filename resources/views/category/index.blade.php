@@ -16,9 +16,6 @@
                             @csrf
                             <div class="addInvBody">
 
-                                <div style="float: right;">
-                                    <i style="padding:5px; font-size: 40px;" class='bx bx-barcode-reader'></i>
-                                </div>
                                 <div class="invInputContainer">
                                     <input type="text" placeholder="&#xf49e; Category Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="name" />
@@ -41,11 +38,7 @@
                 </div>
             </div>
 
-            <li>
-                <a class="menuBtn">
-                    <i class='bx bx-minus-circle' style="font-size: 30px; color: red;"></i>
-                </a>
-            </li>
+
         </div>
 
         <table>
@@ -82,4 +75,13 @@
     </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+        $('#sidebar .side-menu.top li').removeClass('active');
+        $('#categories').addClass("active");
+
+
+</script>
 @endsection

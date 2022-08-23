@@ -37,7 +37,7 @@
 			<span class="text">Inventory Tracking System</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
+			<li class="active" id="home">
 				<a href="/home">
 					<i class='bx bxs-home'></i>
 					<span class="text">Home</span>
@@ -46,7 +46,7 @@
 
             @if(in_array('lab_view',Session::get('permissions')))
 
-            <li>
+            <li id="labs">
 				<a href="/labs">
 					<i class='bx bxs-flask'></i>
 					<span class="text">Labs</span>
@@ -57,7 +57,7 @@
 
             @if(in_array('category_view',Session::get('permissions')))
 
-            <li>
+            <li id="categories">
 				<a href="/categories">
 					<i class='bx bxs-category'></i>
 					<span class="text">Categories</span>
@@ -66,7 +66,7 @@
 
             @endif
             @if(in_array('inventory_view_all',Session::get('permissions')) or in_array('inventory_view_specific',Session::get('permissions')))
-			<li>
+			<li id="inventories">
 				<a href="/inventories">
 					<i class='bx bxs-package'></i>
 					<span class="text">Inventory</span>
@@ -74,7 +74,7 @@
 			</li>
             @endif
             @if(in_array('user_view',Session::get('permissions')))
-			<li>
+			<li id="users">
 				<a href="/users">
 					<i class='bx bxs-group'></i>
 					<span class="text">Users</span>
@@ -96,7 +96,7 @@
 
 		<!-- NAVBAR -->
 		<nav>
-			<i class='bx bx-menu'></i>
+			{{-- <i class='bx bx-menu'></i> --}}
 			<a href="#" class="nav-link">Home</a>
 			<form action="#">
 				<div class="form-input">
@@ -167,11 +167,11 @@
 	</section>
 	<!-- CONTENT -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" type="text/javascript"></script>
 	<script src="/js/script.js"></script>
     <script src="/js/modal.js"></script>
 	<script src="/js/slideLeft.js"></script>
-    </script>
+
 </body>
 
 </html>

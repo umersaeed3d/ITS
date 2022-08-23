@@ -12,7 +12,7 @@ class CrudRepository implements CrudInterface
 	//To view all the data
 	public function all($model)
 	{
-		return $model::get();
+		return $model::orderBy('id','desc')->get();
 	}
 	//Get an individual record
 	public function get($model, $id)

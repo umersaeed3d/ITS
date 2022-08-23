@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class InventoryHistory extends Model
 {
     use HasFactory;
-    protected $fillable = ['inventory_id','initial_lab_id','issue_date','allocated_to'];
+    protected $fillable = ['inventory_id','initial_lab_id','issue_date','allocated_to','final_lab_id'];
 
     public function inventory(){
         return $this->belongsTo(\App\Models\Inventory::class);

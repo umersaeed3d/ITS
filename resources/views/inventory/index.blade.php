@@ -64,11 +64,7 @@
                 </div>
             </div>
 
-            <li>
-                <a class="menuBtn">
-                    <i class='bx bx-minus-circle' style="font-size: 30px; color: red;"></i>
-                </a>
-            </li>
+
         </div>
 
         <table>
@@ -76,8 +72,8 @@
                 <tr>
 
                     <th>Name</th>
-                    <th>Desc</th>
-                    <th>Price</th>
+                    {{-- <th>Desc</th>
+                    <th>Price</th> --}}
                     <th>Category</th>
                     <th>Status</th>
                     <th>Issue Date</th>
@@ -88,8 +84,8 @@
                 @foreach ($inventories as $inventory)
                     <tr>
                         <td>{{ $inventory->name }}</td>
-                        <td>{{ $inventory->desc }}</td>
-                        <td>{{ $inventory->price }}</td>
+                        {{-- <td>{{ $inventory->desc }}</td>
+                        <td>{{ $inventory->price }}</td> --}}
                         <td>{{ $inventory->category->name }}</td>
                         <td>
                             @if($inventory->is_active == 0)
@@ -109,4 +105,13 @@
     </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+        $('#sidebar .side-menu.top li').removeClass('active');
+        $('#inventories').addClass("active");
+
+
+</script>
 @endsection
