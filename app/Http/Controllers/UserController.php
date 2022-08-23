@@ -66,7 +66,7 @@ class UserController extends Controller
             $this->crud->store(User::class,$data);
             return redirect()->back()->with('success','User Added Successfully');
 
-        }catch(\Exception $e){
+        }catch(\Illuminate\Database\QueryException $e){
             return redirect()->back()->with('error',$e->getMessage());
         }
 
