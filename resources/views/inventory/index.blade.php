@@ -94,7 +94,7 @@
                             <span class="status completed">Active</span>
                             @endif
                         </td>
-                        <td>{{ $inventory->created_at->format('d/m/Y') }}</td>
+                        <td>{{ ($inventory->created_at !== null) ? $inventory->created_at->format('d/m/Y') : 'null' }}</td>
                         <td><form action="/inventory/{{ $inventory->id }}" method="POST"> @csrf @method('delete') <button type="submit"><span class="status pending">Delete</span></button></form><br><a href="/inventories/history/{{ $inventory->id }}"><span class="status pending">History</span></a></td>
                     </tr>
                 @endforeach
