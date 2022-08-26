@@ -17,35 +17,35 @@
                             <div class="addInvBody">
 
                                 <div style="float: right;">
-                                    <i style="padding:5px; font-size: 40px;" class='bx bx-barcode-reader'></i>
+                                    {{-- <i style="padding:5px; font-size: 40px;" class='bx bx-barcode-reader'></i> --}}
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Inventory Name"
+                                    <input type="text" placeholder="Inventory Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="name" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="number" placeholder="&#xf49e; Inventory Price"
+                                    <input type="number" placeholder="Inventory Price"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="price" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Inventory Desc"
+                                    <input type="text" placeholder="Inventory Desc"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="desc" />
                                 </div>
 
                                 <select name="category_id" id="lab" style="color: #696969; font-family: Roboto Slab, serif, 'Font Awesome 5 Free'; width: 100%;">
-                                    <option value="none" selected disabled hidden>&#xf109; Select Category</option>
+                                    <option value="none" selected disabled hidden>Select Category</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
 								</select>
                                 <select name="user_id" id="lab" style="color: #696969; font-family: Roboto Slab, serif, 'Font Awesome 5 Free'; width: 100%;">
-                                    <option value="none" selected disabled hidden>&#xf109; Select User</option>
+                                    <option value="none" selected disabled hidden>Select User</option>
                                     @foreach ($users as $user)
                                         <option value="{{ $user->id }}">{{ $user->full_name }} - {{ $user->user_name }}</option>
                                     @endforeach
 								</select>
                                 <select name="lab_id" id="lab" style="color: #696969; font-family: Roboto Slab, serif, 'Font Awesome 5 Free'; width: 100%;">
-                                    <option value="none" selected disabled hidden>&#xf109; Select lab</option>
+                                    <option value="none" selected disabled hidden>Select lab</option>
                                     @foreach ($labs as $lab)
                                         <option value="{{ $lab->id }}">{{ $lab->name }} - {{ $lab->code }}</option>
                                     @endforeach

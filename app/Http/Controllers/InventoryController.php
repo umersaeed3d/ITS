@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\lab;
 use Illuminate\Http\Request;
 use App\Repositories\CrudInterface;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class InventoryController extends Controller
@@ -33,12 +34,17 @@ class InventoryController extends Controller
         $labs = lab::where('is_active',"1")->get();
         $inventories = [];
         if(in_array('inventory_view_specific',Session::get('permissions'))){
-            $allocatedTo = InventoryHistory::where('allocated_to',auth()->user()->id)->get('inventory_id');
+            $allocatedTo = InventoryHistory::latest()
+            ->get()
+            ->unique('inventory_id');
 
             $allocatedArray = [];
             foreach($allocatedTo as $a){
-                $allocatedArray[] = $a->inventory_id;
+                if($a->allocated_to == auth()->user()->id){
+                    $allocatedArray[] = $a->inventory_id;
+                }
             }
+            // dd($allocatedArray);
             foreach($data as $d){
 
                 if(in_array($d->id,$allocatedArray)){

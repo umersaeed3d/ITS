@@ -17,11 +17,11 @@
                             <div class="addInvBody">
 
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Category Name"
+                                    <input type="text" placeholder="Category Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="name" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="file" placeholder="&#xf49e; Upload Image"
+                                    <input type="file" placeholder="Upload Image"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="image" />
                                 </div>
 

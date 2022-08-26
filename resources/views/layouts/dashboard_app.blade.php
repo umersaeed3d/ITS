@@ -100,7 +100,7 @@
 			<a href="#" class="nav-link">Home</a>
 			<form action="#">
 				<div class="form-input">
-					<i style="padding:5px; font-size: 20px;" class='bx bx-barcode-reader'></i>
+					{{-- <i style="padding:5px; font-size: 20px;" class='bx bx-barcode-reader'></i> --}}
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>

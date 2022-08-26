@@ -18,16 +18,16 @@
 
 
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Lab Name"
+                                    <input type="text" placeholder="Lab Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="name" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Lab Code"
+                                    <input type="text" placeholder="Lab Code"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="code" />
                                 </div>
 
                                 <select name="incharge_id" id="lab" style="color: #696969; font-family: Roboto Slab, serif, 'Font Awesome 5 Free'; width: 100%;">
-                                    <option value="none" selected disabled hidden>&#xf109; Select Lab Incharge</option>
+                                    <option value="none" selected disabled hidden>Select Lab Incharge</option>
                                     @foreach ($labIncharge as $user)
                                         <option value="{{ $user->id }}">{{ $user->full_name }} - {{ $user->user_name }}</option>
                                     @endforeach

@@ -18,24 +18,24 @@
 
 
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Full Name"
+                                    <input type="text" placeholder="Full Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="full_name" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; User Name"
+                                    <input type="text" placeholder="User Name"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="user_name" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="email" placeholder="&#xf49e; Email"
+                                    <input type="email" placeholder="Email"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="email" />
                                 </div>
                                 <div class="invInputContainer">
-                                    <input type="text" placeholder="&#xf49e; Password"
+                                    <input type="text" placeholder="Password"
                                         style="font-family: Roboto Slab, serif, 'Font Awesome 5 Free';" name="password" />
                                 </div>
 
                                 <select name="role_id" id="lab" style="color: #696969; font-family: Roboto Slab, serif, 'Font Awesome 5 Free'; width: 100%;">
-                                    <option value="none" selected disabled hidden>&#xf109; Select Role</option>
+                                    <option value="none" selected disabled hidden>Select Role</option>
                                     @foreach ($roles as $role)
                                         <option value="{{ $role->id }}">{{ $role->name }}</option>
                                     @endforeach
