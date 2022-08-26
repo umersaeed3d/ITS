@@ -64,7 +64,7 @@
                             <span class="status completed">Active</span>
                             @endif
                         </td>
-                        <td>{{ $category->created_at->format('d/m/Y') }}</td>
+                        <td>{{ ($category->created_at !== null) ? $category->created_at->format('d/m/Y') : 'NULL' }}</td>
                         <td><form action="/categories/{{ $category->id }}" method="POST"> @csrf @method('delete') <button type="submit"><span class="status pending">Delete</span></button></form></td>
                     </tr>
                 @endforeach

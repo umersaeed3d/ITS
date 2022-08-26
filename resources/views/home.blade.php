@@ -76,7 +76,7 @@
     <div class="transfer">
         <div class="head">
             <h3>Transfer</h3>
-            <i style="padding:5px; font-size: 30px;" class='bx bx-barcode-reader'></i>
+            {{-- <i style="padding:5px; font-size: 30px;" class='bx bx-barcode-reader'></i> --}}
         </div>
         <form action="/inventories/transfer" method="post">
             @csrf
