@@ -6,8 +6,7 @@ use App\Models\Inventory;
 use App\Models\InventoryHistory;
 use App\Models\lab;
 use App\Models\User;
-use App\Models\Permission;
-use Illuminate\Http\Request;
+use Session;
 
 class HomeController extends Controller
 {
@@ -28,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $inventoryCount = Inventory::count();
         $userCount = User::count();
         $labCount = lab::count();

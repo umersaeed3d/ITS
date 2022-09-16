@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Permission;
+use App\Models\Role;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -48,7 +49,7 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        $permissionTable = Permission::where('role_id',auth()->user()->role_id)->get();
+        $permissionTable = Role::find(auth()->user()->role_id)->permissions;
         $access = [];
         foreach ($permissionTable as $permission) {
             array_push($access,$permission->name);

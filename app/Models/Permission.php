@@ -14,8 +14,13 @@ class Permission extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function role()
+    public function roles()
     {
-        return $this->belongsTo(\App\Models\Role::class);
+    //return $this->belongsToMany(RelatedModel, pivot_table_name, foreign_key_of_current_model_in_pivot_table, foreign_key_of_other_model_in_pivot_table);
+        return $this->belongsToMany(
+            \App\Models\Role::class,
+            'role_permissions',
+            'permission_id',
+            'role_id');
     }
 }

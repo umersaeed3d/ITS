@@ -14,7 +14,13 @@ class Role extends Model
         return $this->hasMany(\App\Models\User::class);
     }
 
-    public function permissions(){
-        return $this->hasMany(\App\Models\Permission::class);
+    public function permissions()
+    {
+    //return $this->belongsToMany(RelatedModel, pivot_table_name, foreign_key_of_current_model_in_pivot_table, foreign_key_of_other_model_in_pivot_table);
+        return $this->belongsToMany(
+            \App\Models\Permission::class,
+            'role_permissions',
+            'role_id',
+            'permission_id');
     }
 }
