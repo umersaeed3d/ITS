@@ -1,5 +1,15 @@
 # ITS
-Inventory Tracking System
+Inventory Tracking System with following functionalities:
+- Roles (Admin, Chairman, Lab Incharge, Data Entry Operator)
+- Permissions
+- User Module
+- Can add/delete Labs
+- Can add/delete Categories
+- Can add/delete Inventory
+- Can move inventory between Labs
+- Can track which inventory is available in which lab and from where it has been going through
+
+PS: I will add edit/update module as well. It's just beta version
 
 
 Steps:
