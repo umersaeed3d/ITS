@@ -23,7 +23,7 @@
     <div>
         <div class="loginHeader">
             <center>
-                <img src="images/NEDLogo.png" />
+                <img src="images/ims.jpg" />
             </center>
 
         </div>
